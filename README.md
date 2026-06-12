@@ -17,7 +17,7 @@ infrastructure e entrypoint).
  
 Em vez de varrer o codebase com `grep` para entender o impacto de uma mudança, a
 equipe abre a página, busca o módulo e enxerga na hora **quem depende dele, o que
-ele usa e quem implementa cada interface** — com o layout em anéis concêntricos
+ele usa e quem implementa cada interface** com o layout em anéis concêntricos
 refletindo a regra de dependência da Clean Architecture: qualquer seta apontando
 "para fora" do centro salta aos olhos como violação de camada.
  
@@ -26,8 +26,8 @@ Desenvolvido pela [SophiaMind](https://sophiamind.com.br) como uma página está
  
 ## Funcionalidades
  
-- **Modo Arquitetura**: anéis concêntricos por camada — domain no centro,
-  entrypoint na borda — evidenciando violações da regra de dependência
+- **Modo Arquitetura**: anéis concêntricos por camada domain no centro,
+  entrypoint na borda evidenciando violações da regra de dependência
 - **Modo Orgânico**: layout de força livre (force-directed) para explorar clusters
 - **Painel de detalhes** por módulo: descrição, arquivo, exports, "Depende de" e
   "Usado por", com navegação clicável entre dependências
@@ -44,13 +44,13 @@ Desenvolvido pela [SophiaMind](https://sophiamind.com.br) como uma página está
 - Responsivo (desktop e mobile) e com suporte a `prefers-reduced-motion`
 ## Pré-requisitos
  
-Nenhuma instalação é necessária — é uma página estática. Você só precisa de:
+Nenhuma instalação é necessária é uma página estática. Você só precisa de:
  
 - Um navegador moderno (Chrome, Firefox, Edge ou Safari)
 - Conexão com a internet no primeiro carregamento (D3.js e fontes via CDN)
 - Um arquivo `graph.json` no formato definido em [`GRAPH_SPEC.md`](GRAPH_SPEC.md),
   gerado e mantido pelo Claude Code no repositório do sistema
-Para servir localmente (opcional), qualquer servidor estático resolve — por
+Para servir localmente (opcional), qualquer servidor estático resolve por
 exemplo, Python 3 já instalado na máquina.
  
 ## Instalação
@@ -91,7 +91,7 @@ página, usar o botão **Carregar JSON** ou **Colar** o conteúdo diretamente.
 1. Suba `index.html` e o `graph.json` para a branch publicada (ou pasta `docs/`)
 2. Em **Settings → Pages**, aponte para a branch/pasta
 3. Acesse `https://seu-usuario.github.io/seu-repo/`
-4. Para atualizar o grafo, basta substituir o `graph.json` — nenhuma alteração no
+4. Para atualizar o grafo, basta substituir o `graph.json` nenhuma alteração no
    HTML é necessária
 ## Exemplos de Uso
  
@@ -142,12 +142,12 @@ Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações
  
 ## Autores
  
-**SophiaMind** — Desenvolvimento e manutenção — [sophiamind.com.br](https://sophiamind.com.br)
+**Team SophiaMind** Desenvolvimento e manutenção [sophiamind.com.br](https://sophiamind.com.br)
  
 ## Agradecimentos
  
-- [D3.js](https://d3js.org/) — simulação de força e renderização do grafo
-- [Claude Code](https://www.anthropic.com/claude-code) — geração e manutenção
+- [D3.js](https://d3js.org/) simulação de força e renderização do grafo
+- [Claude Code](https://www.anthropic.com/claude-code) geração e manutenção
   automática do `graph.json` a cada commit do sistema
-- [Google Fonts](https://fonts.google.com/) — Space Grotesk e JetBrains Mono
+- [Google Fonts](https://fonts.google.com/) Space Grotesk e JetBrains Mono
 - A todos os engenheiros da equipe que usam e dão feedback sobre a ferramenta
